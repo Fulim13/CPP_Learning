@@ -82,6 +82,22 @@ int main()
         cout << i << "\n";
     }
 
+    // 6.1 For Loop with Range
+    // initialize array
+    int numArray[] = {1, 2, 3, 4, 5};
+
+    // use of ranged for loop to print array elements
+    for (int n : numArray)
+    {
+        cout << n << " ";
+    }
+
+    // better optimized memory
+    for (int &n : numArray)
+    {
+        cout << n << " ";
+    }
+
     // 7. Break Statement
     for (int i = 0; i < 5; i++)
     {

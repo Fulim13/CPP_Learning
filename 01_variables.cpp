@@ -56,7 +56,12 @@ int main()
     x = 4 % 2; // x is now 0
 
     // 4. Arrays
-    int numbers[5] = {1, 2, 3, 4, 5};
+    int numbers[] = {1, 2, 3, 4, 5};
+    string names[5];
+
+    // 2d array
+    int test[2][3] = {2, 4, 5, 9, 0, 19};
+
     cout << numbers[0];
 
     for (int i = 0; i < sizeof(numbers) / sizeof(numbers[0]); i++)

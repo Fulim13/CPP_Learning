@@ -85,3 +85,28 @@ int main()
     // reference();
     return 0;
 }
+
+// Here, if ptr points to the first element in the above example then ptr + 3 will point to the fourth element. For example,
+
+int *ptr;
+int arr[5];
+ptr = arr;
+
+ptr + 1 is equivalent to &arr[1];
+ptr + 2 is equivalent to &arr[2];
+ptr + 3 is equivalent to &arr[3];
+ptr + 4 is equivalent to &arr[4];
+// Similarly, we can access the elements using the single pointer.For example,
+
+// use dereference operator
+*ptr == arr[0];
+*(ptr + 1) is equivalent to arr[1];
+*(ptr + 2) is equivalent to arr[2];
+*(ptr + 3) is equivalent to arr[3];
+*(ptr + 4) is equivalent to arr[4];
+
+// Suppose if we have initialized ptr = &arr[2]; then
+ptr - 2 is equivalent to &arr[0];
+ptr - 1 is equivalent to &arr[1];
+ptr + 1 is equivalent to &arr[3];
+ptr + 2 is equivalent to &arr[4];

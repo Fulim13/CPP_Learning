@@ -71,3 +71,42 @@ int main()
 
     return 0;
 }
+
+// Question: WRite a function to slice an array from a given start index to end index. Slicing refers to the process of extracting a subset of an array from one index(start) to another index(end).Given an array and the indexes to slice at, return the sliced array.For example, if arr[] = {15, 7, 13, 20, 9}, start = 1, and end = 3, the expected output is{7, 13, 20}.
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> sliceArray(const vector<int> &arr, int start, int end)
+{
+    // Validate indices
+    if (start < 0 || end >= arr.size() || start > end)
+    {
+        return {}; // Return an empty vector for invalid input
+    }
+
+    // Use vector's range constructor to slice the array
+    return vector<int>(arr.begin() + start, arr.begin() + end + 1);
+}
+
+int main()
+{
+    vector<int> arr = {15, 7, 13, 20, 9};
+    int start = 1, end = 3;
+
+    vector<int> sliced = sliceArray(arr, start, end);
+    if (sliced.empty())
+    {
+        cout << "Invalid indices!" << endl;
+    }
+    else
+    {
+        for (int num : sliced)
+        {
+            cout << num << " ";
+        }
+    }
+
+    return 0;
+}

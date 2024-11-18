@@ -82,3 +82,14 @@ std::string say_hi(std::string name)
 
     return "Hey there, " + name + "!\n";
 }
+
+// 5. Default Arguments
+// Once we provide a default value for a parameter, all subsequent parameters must also have default values. For example,
+// Invalid
+void add(int a, int b = 3, int c, int d);
+
+// Invalid
+void add(int a, int b = 3, int c, int d = 4);
+
+// Valid
+void add(int a, int c, int b = 3, int d = 4);
