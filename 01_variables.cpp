@@ -13,13 +13,24 @@ int main()
     // cin >> tip;
     // cout << "Tip amount: " << tip << endl;
 
+    // 1.5 Naming Conventions
+    // Camel Case: tipAmount
+    // Pascal Case: TipAmount
+    // Snake Case: tip_amount
+
     // 2. Variables (int, float, double, char, string, bool)
     int year = 2002;
-    float pi = 3.14;
+    float pi = 3.14F; // F is required for float
+    // what if we remove F?
+    // float pi = 3.14;
     double salary = 100000.00;
     char grade = 'A';
     string name = "Fu Lim";
     bool isStudent = true;
+
+    // 2.5 Constants
+    const int BIRTH_YEAR = 2002;
+    // BIRTH_YEAR = 2003; // Error
 
     // 3. Arithmetic Operations
     int x = 0;
