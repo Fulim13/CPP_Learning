@@ -12,6 +12,8 @@ int main()
 
     // 1. Create a vector
     vector<int> v = {1, 2, 3, 4, 5};
+    vector<int> v1{1, 2, 3, 4, 5};
+    vector<int> v2(5, 0); // 5 elements with value 0
 
     // 2. Accessing elements
     cout << "First Element: " << v[0] << "\n";

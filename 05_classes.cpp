@@ -1,37 +1,34 @@
 #include <iostream>
+#include "Rectangle.h"
 
 using namespace std;
 
-class City
+int Rectangle::getArea()
 {
-public:
-    string name;
-    int population;
-    string country;
+    return width * height;
+}
 
-    City(string name, int population, string country, bool isCapital)
-    {
-        this->name = name;
-        this->population = population;
-        this->country = country;
-        this->isCapital = isCapital;
-    }
+void Rectangle::setWidth(int w)
+{
+    width = w;
+}
 
-    void printInfo()
-    {
-        cout << "Name: " << name << "\n";
-        cout << "Population: " << population << "\n";
-        cout << "Country: " << country << "\n";
-    }
+void Rectangle::setHeight(int h)
+{
+    height = h;
+}
 
-private:
-    bool isCapital;
-};
+Rectangle::Rectangle(int w, int h)
+{
+    width = w;
+    height = h;
+}
 
 int main()
 {
-    City newYork("New York", 8175133, "USA", false);
-    newYork.printInfo();
-
+    Rectangle r = Rectangle(0, 0);
+    r.setWidth(5);
+    r.setHeight(10);
+    cout << "Area: " << r.getArea() << endl;
     return 0;
 }

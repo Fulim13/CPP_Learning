@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
@@ -20,13 +21,26 @@ int main()
 
     // 2. Variables (int, float, double, char, string, bool)
     int year = 2002;
-    float pi = 3.14F; // F is required for float
-    // what if we remove F?
-    // float pi = 3.14;
+    long population = 1000000000L; // whole numbers are by default int
+    float pi = 3.14F;              // floating point number are by default double
     double salary = 100000.00;
     char grade = 'A';
     string name = "Fu Lim";
     bool isStudent = true;
+    auto x_auto = 5; // auto infers the type
+
+    // 2.1 Number Systems
+    int decimal = 10;
+    int octal = 0b10; // 8
+    int hex = 0x10;   // 16
+
+    // 2.2 Data types size and limits
+    int bytes = sizeof(int);
+    int min = numeric_limits<int>::min();
+    int max = numeric_limits<int>::min();
+    cout << "Bytes: " << bytes << endl;
+    cout << "Min: " << min << endl;
+    cout << "Max: " << max << endl;
 
     // 2.5 Constants
     const int BIRTH_YEAR = 2002;
@@ -43,7 +57,7 @@ int main()
 
     // 4. Arrays
     int numbers[5] = {1, 2, 3, 4, 5};
-    cout << "First Element: " << numbers[0] << endl;
+    cout << numbers[0];
 
     for (int i = 0; i < sizeof(numbers) / sizeof(numbers[0]); i++)
     {
@@ -51,4 +65,15 @@ int main()
     }
 
     return 0;
+
+    // 5. Explicit Casting
+    double a = 5.5;
+    int b = (int)a; // 5
+
+    // 5.1 Implicit Casting
+    int c = 5;
+    double d = c; // 5.0
+
+    // 5.2 C++ Style Casting
+    int c = static_cast<int>(5.5);
 }
